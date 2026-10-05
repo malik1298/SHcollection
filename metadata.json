@@ -1,0 +1,6 @@
+{
+  "name": "SH Collection - Luxury Bridal & Formal Dresses",
+  "description": "Exclusive collection of ladies bridal couture, luxury formal dresses, and festive bridal ensembles by SH Collection.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

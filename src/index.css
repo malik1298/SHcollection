@@ -1,0 +1,80 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --color-burgundy: #722F37;
+    --color-burgundy-dark: #501F25;
+    --color-champagne: #D4AF37;
+    --color-champagne-light: #F4E8C1;
+    --color-ivory: #FDFBF7;
+    --color-cream: #F5EFEB;
+  }
+
+  body {
+    font-family: 'Montserrat', sans-serif;
+    color: #231F20;
+    background-color: #FDFBF7;
+  }
+
+  h1, h2, h3, .font-serif-luxury {
+    font-family: 'Playfair Display', 'Cormorant Garamond', Georgia, serif;
+  }
+
+  .font-garamond {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+  }
+}
+
+/* Custom luxury scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #F5EFEB;
+}
+::-webkit-scrollbar-thumb {
+  background: #C5A059;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #722F37;
+}
+
+/* Modern slim scrollbar for Admin Sidebar */
+.admin-sidebar-scroll::-webkit-scrollbar {
+  width: 5px;
+}
+.admin-sidebar-scroll::-webkit-scrollbar-track {
+  background: rgba(42, 18, 21, 0.4);
+}
+.admin-sidebar-scroll::-webkit-scrollbar-thumb {
+  background: #D4AF37;
+  border-radius: 9999px;
+}
+.admin-sidebar-scroll::-webkit-scrollbar-thumb:hover {
+  background: #F4E8C1;
+}
+
+/* Print specific styles for high quality order slip */
+@media print {
+  body * {
+    visibility: hidden;
+  }
+  #printable-slip, #printable-slip * {
+    visibility: visible;
+  }
+  #printable-slip {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    margin: 0;
+    padding: 20px;
+    background: white !important;
+    color: black !important;
+  }
+  .no-print {
+    display: none !important;
+  }
+}
